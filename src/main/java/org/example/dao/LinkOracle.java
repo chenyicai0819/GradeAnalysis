@@ -9,8 +9,8 @@ public class LinkOracle {
     public static void linkOracle() throws ClassNotFoundException, SQLException {
 
         String url="jdbc:oracle:thin:@8.129.212.155:1521:orcl";
-        String info="cyc";
-        String password="cyc1234";
+        String info="george";
+        String password="george1234";
         Class.forName("oracle.jdbc.driver.OracleDriver");
         conn= DriverManager.getConnection(url,info,password);
         if(null != conn){
