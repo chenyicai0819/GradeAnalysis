@@ -31,6 +31,15 @@ public class ReadExcel {
                         getValue(rows.getCell(14)),getValue(rows.getCell(15)),getValue(rows.getCell(16)),
                         getValue(rows.getCell(17))));
             }
+             /*
+            for(int i=1;i<=sheet.getLastRowNum();i++){
+                XSSFRow rows=sheet.getRow(i);
+                students.add(new StudentInfoToExcel(getValue(rows.getCell(0)),getValue(rows.getCell(1)),
+                        getValue(rows.getCell(2)),getValue(rows.getCell(3)
+                        )));
+            }
+
+             */
             return students;
         } catch (IOException e) {
             e.printStackTrace();

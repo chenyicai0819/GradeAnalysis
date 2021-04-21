@@ -31,8 +31,6 @@ public class InsterDemo {
             List<StudentInfoToExcel> students = readExcel.readExcel(file);
             Object[][] qrList=new Object[students.size()][];
 
-
-
             for(int i=0;i<students.size();i++){
                 qrList[i]=new Object[18];
                 qrList[i][0]=students.get(i).getGrade_id();
@@ -54,6 +52,17 @@ public class InsterDemo {
                 qrList[i][16]=students.get(i).getText_way();
                 qrList[i][17]=students.get(i).getCourse_gene();
             }
+            /*
+            for(int i=0;i<students.size();i++){
+                qrList[i]=new Object[4];
+                qrList[i][0]=students.get(i).getCourse_id();
+                qrList[i][1]=students.get(i).getCourse_gene();
+                qrList[i][2]=students.get(i).getCourse_name();
+                qrList[i][3]=students.get(i).getGrade_value();
+
+            }
+
+             */
             if(isInsert){
                 int result = qr.batch(lo.conn,sql,qrList).length;  //批处理
                 System.out.println("插入数据库的长度：" + result + "\t" + "Excel表的长度：" + students.size());

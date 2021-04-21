@@ -46,6 +46,12 @@ public class StudentInfoToExcel {
         this.course_gene=course_gene;
     }
 
+    public StudentInfoToExcel(String course_id,String course_gene,String course_name, String grade_value){
+        this.course_id=course_id;
+        this.course_name=course_name;
+        this.grade_value=grade_value;
+        this.course_gene=course_gene;
+    }
 
     public String getTerm() {
         return term;
